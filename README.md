@@ -10,7 +10,7 @@ Atenção: o programa usa `windows.h`, `cls` e `pause`, portanto funciona apenas
 |-------|-----------|--------|
 | 1 | Cadastrar um aluno (nome e curso) | Disponível |
 | 2 | Listar alunos cadastrados | Disponível |
-| 3 | Editar informações | Em desenvolvimento |
+| 3 | Editar informações |  Disponivel
 | 4 | Remover aluno pela matrícula | Disponível |
 | 0 | Sair | Disponível |
 
@@ -68,7 +68,3 @@ O que quer fazer? [Escreva o numero]
 - Garantir matrículas únicas após remoções
 - Salvar os dados em arquivo
 - Tornar o programa multiplataforma
-
-## Autor
-
-[joaopedrosbgonc-del](https://github.com/joaopedrosbgonc-del)
