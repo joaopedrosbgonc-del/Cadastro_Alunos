@@ -69,6 +69,42 @@ int main()
             break;
 
         case 3:
+                    {
+            int matricula, encontrado = 0;
+
+            system("cls");
+            printf("Informe o numero da matricula do aluno\n--> ");
+            scanf("%d", &matricula);
+
+            for (int i = 0; i < total_alunos; i++)
+            {
+                if (alunos[i].matricula == matricula)
+                {
+                    encontrado = 1;
+
+                    printf("\nAluno encontrado: %s --- %s\n", alunos[i].nome, alunos[i].curso);
+
+                    while (getchar() != '\n');
+
+                    printf("\nInsira novo nome\n--> ");
+                    fgets(alunos[i].nome, 80, stdin);
+                    alunos[i].nome[strcspn(alunos[i].nome, "\n")] = '\0';
+
+                    printf("\nInsira novo curso\n--> ");
+                    fgets(alunos[i].curso, 30, stdin);
+                    alunos[i].curso[strcspn(alunos[i].curso, "\n")] = '\0';
+
+                    printf("\nCadastro atualizado.\n");
+                    break;
+                }
+            }
+
+            if (encontrado == 0)
+            {
+                printf("\nAluno não encontrado.\n");
+            }
+
+            system("pause");
             break;
 
         case 4:
