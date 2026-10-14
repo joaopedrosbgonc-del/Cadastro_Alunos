@@ -61,9 +61,9 @@ int main()
             printf("exibindo os alunos cadastrados:\n");
             loading(1500);
             system("cls");
-            for (int i = 0; i <= total_alunos; i++)
+            for (int i = 0; i < total_alunos; i++)
             {
-                printf(" %s\n", alunos[i].nome);
+                printf(" %s --- %d\n\n", alunos[i].nome, alunos[i].matricula);
             }
             system("pause");
             break;
@@ -128,7 +128,7 @@ void removerAluno(Aluno alunos[], int *total_alunos)
 
             (*total_alunos)--;
 
-            printf("\nAluno removido com sucesso!\n");
+            printf("\nAluno %s removido com sucesso!\n", alunos[i].nome);
             break;
         }
     }
