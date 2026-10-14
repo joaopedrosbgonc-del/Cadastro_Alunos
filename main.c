@@ -5,14 +5,14 @@
 void titulo();
 void loading(int tempo);
 
-typedef struct{
+typedef struct{                       //tipo personalizado "Aluno"
     char nome[80], curso[30];
     int matricula;
 }Aluno;
 
 int max_alunos = 100;
 int main() {
-    Aluno alunos[max_alunos];
+    Aluno alunos[max_alunos];         //vetor de alunos
     int r, total_alunos = 0;
     do{
         titulo();
