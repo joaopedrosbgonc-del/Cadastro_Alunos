@@ -36,7 +36,7 @@ O objetivo deste projeto é desenvolver um **sistema de cadastro de alunos em li
 | RF04 | O sistema deve listar todos os alunos cadastrados (nome e matrícula). | Implementado |
 | RF05 | O sistema deve buscar um aluno pela matrícula e exibir seus dados. | Planejado |
 | RF06 | O sistema deve remover um aluno a partir da matrícula informada, avisando se ela não existir. | Implementado |
-| RF07 | O sistema deve permitir editar as informações de um aluno. | Planejado (próximas entregas) |
+| RF07 | O sistema deve permitir editar as informações de um aluno. | Implementado |
 
 ## 4. Requisitos não funcionais
 

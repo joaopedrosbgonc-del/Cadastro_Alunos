@@ -10,8 +10,7 @@ typedef struct
     int matricula;
 } Aluno;
 
-
-void titulo();
+void titulo(void);
 void loading(int tempo);
 void removerAluno(Aluno alunos[], int *total_alunos);
 
@@ -61,20 +60,22 @@ int main()
             printf("exibindo os alunos cadastrados:\n");
             loading(1500);
             system("cls");
+            printf("\n%-30s %-25s %-10s\n","NOME:", "CURSO:", "MATRICULA:");
+            printf("-----------------------------------------------------------------\n");
             for (int i = 0; i < total_alunos; i++)
             {
-                printf(" %s --- %d\n\n", alunos[i].nome, alunos[i].matricula);
+                printf(" %-30.30s %-25.25s %-10d\n\n", alunos[i].nome, alunos[i].curso ,alunos[i].matricula);
             }
             system("pause");
             break;
 
         case 3:
-                            {
+            {
             int matricula, encontrado = 0;
 
             system("cls");
             printf("Informe o numero da matricula do aluno\n--> ");
-            scanf("%d", &matricula);
+            scanf(" %d", &matricula);
 
             for (int i = 0; i < total_alunos; i++)
             {
@@ -85,8 +86,8 @@ int main()
                     printf("\nAluno encontrado: %s --- %s\n", alunos[i].nome, alunos[i].curso);
 
                     while (getchar() != '\n');
-
                     printf("\nInsira novo nome\n--> ");
+                    
                     fgets(alunos[i].nome, 80, stdin);
                     alunos[i].nome[strcspn(alunos[i].nome, "\n")] = '\0';
 
@@ -107,7 +108,7 @@ int main()
             system("pause");
 
             break;
-
+        }
         case 4:
             system("cls");
             removerAluno(alunos, &total_alunos);
@@ -118,6 +119,7 @@ int main()
         }
 
     } while (r != 0);
+
 }
 
 void titulo()
@@ -157,6 +159,8 @@ void removerAluno(Aluno alunos[], int *total_alunos)
         if (alunos[i].matricula == matricula)
         {
             encontrado = 1;
+            char temp[100];
+            strcpy(temp, alunos[i].nome);
 
             for (int j = i; j < *total_alunos - 1; j++)
             {
@@ -165,7 +169,7 @@ void removerAluno(Aluno alunos[], int *total_alunos)
 
             (*total_alunos)--;
 
-            printf("\nAluno %s removido com sucesso!\n", alunos[i].nome);
+            printf("\nAluno %s removido com sucesso!\n", temp);
             break;
         }
     }
